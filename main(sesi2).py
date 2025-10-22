@@ -1,0 +1,59 @@
+# 'random' adalah nama library
+import random
+
+# variable
+welcome_message = "CUYPYYY!!!!"
+cuypy_position = random.randint(1, 4)
+
+
+print("************************")
+print(f"***** {welcome_message} *****")
+print("************************")
+
+nama_user = input("masukkan nama kamu: ")
+
+bentuk_goa = "|_|"
+goa_kosong = [bentuk_goa] * 4 # INI TETEP HARUS KOSONG
+
+goa = goa_kosong.copy() # INI ADALAH TEMPAT BARU UNTUK SI CUYPY
+goa[cuypy_position - 1] = "|0_0|"
+
+goa_kosong = ' '.join(goa_kosong)
+goa = ' '.join(goa)
+# goa = goa_kosong
+
+
+print(f'''
+Halo {nama_user}! Coba perhatikan goa dibawah ini
+ {goa_kosong}
+''')
+
+# input output
+user_choose = int(input("Menurut kamu di goa nomor berapa CUYPY berada? [1 / 2 / 3 / 4] : "))
+
+user_confirm = input(f"Apakah kamu yakin jawabannya adalah {user_choose}? [Y/N] ")
+
+# condition
+
+if user_confirm == "n":
+    print("program dihentikan!")
+    exit()
+elif user_confirm == "y":
+    if user_choose == cuypy_position:
+        print(f"{goa}, \n Selamat Kamu Menang!")
+    else:
+        print(f"{goa}, \n Maaf kamu kalah")
+else:
+    print("Ulangi Program")
+    exit()
+
+# if user_confirm in ["y", "Y"]:
+#     if user_choose == cuypy_position:
+#         print(f"Kamu benar {nama_user}! Posisi CUYPYY ada di goa nomor {cuypy_position}, pilihanmu adalah goa nomor {user_choose}")
+#     else:
+#         print(f"Kamu salah {nama_user}!! CUYPY bukan di goa {user_choose}, CUYPY ada di goa nomor {cuypy_position}")
+# else:
+#     print("Pilihan batal.")
+
+# print(f"Pilihan kamu adalah {user_choose}" )
+
