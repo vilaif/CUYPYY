@@ -19,6 +19,7 @@ def exit_program():
     sleep(1)
     print("1...")
     print("Program berhasil dihentikan")
+    exit()
     
 if __name__ == '__main__':
     welcome_message()
