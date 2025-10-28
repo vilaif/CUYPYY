@@ -1,4 +1,5 @@
 import random
+import main 
 
 def start():
     while True:
@@ -34,7 +35,7 @@ def start():
             
         play_again = input("\n\nApakah ingin melanjutkan gamenya lagi? [y/n]")
         if play_again == "n":
-            break
+            main.menu()
 
 if __name__ == '__main__':
     start()
